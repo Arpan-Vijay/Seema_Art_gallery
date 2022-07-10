@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,600;1,500;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400;500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: whitesmoke; 
+}
+img{
+    width: 100%;
+    height: 100%; 
+    object-fit: cover;
+    border-radius: 10px;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+
+.container{
+    width: 90%;
+    /* height: 100%; */
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+p{
+    font-size: 1.5rem;
+    color: #0d081a;
+}
+.section-heading{
+    font-size: clamp(2rem, 10vw, 8rem);
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    margin-bottom: 5rem;
+    text-align: center;
+    position: relative;
+    margin-top: 3rem;
+}
+
+.section-heading::before{
+    content: attr(data-outline);
+    position: absolute;
+    left: 0%;
+    top: 6%;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+    letter-spacing: 0.2rem;
+    color: transparent;
+    z-index: -1;
+    -webkit-text-stroke: 1.5px #cdb612;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.wrapper .left{
+    padding: 2rem;
+    text-align: center;
+}
+
+.wrapper .left .card{
+    text-align: center;
+    padding: 3rem;
+    box-shadow: 5px 5px 5px 5px #4705fc33;
+    border-radius: 12px;
+    min-height: 200px;
+    width: 300px;
+}
+
+.wrapper .image img{
+    width: 200px;
+    height: 230px;
+    border-radius: 3%;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    object-fit: cover;
+    object-position: 50% 30%;
+}
+.wrapper .left .card-heading{
+    font-family: "Roboto Mono",sans-serif;
+    font-size: 1.9rem;
+    margin-bottom: 1rem;
+    color: black;
+}
+.wrapper .left .card-subheading{
+    font-family: "Montserrat",sans-serif;
+    font-size: 2.2rem;
+    margin-bottom: 0.8rem;
+    color: #48464b;
+}
+.wrapper .left .card-desc{
+    font-family: "Roboto Mono",sans-serif;
+    font-size: 2.1rem;
+    margin-bottom: 2rem;
+    color: #cdb612;
+}
+.wrapper .right .subheading{
+    color: #cdb612;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+}
+.wrapper .right .heading{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+.wrapper .right .desc{
+    color: #48464b;
+    font-size: 1.6rem;
+    margin-bottom: 2.5rem;
+    line-height: 20px;
+}
+
+.right .contact-info {
+	/* margin-bottom: 5rem; */
+}
+.right .contact-info ul {
+	list-style: none;
+}
+.right .contact-info ul li {
+	border-radius: 12px;
+	overflow: hidden;
+}
+
+.right .contact-info ul li .icon{
+    width: 30px;
+    font-weight: 800;
+    color: #cdb612;
+}
+.right .contact-info ul li a {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 1rem;
+	font-size: 1.9rem;
+	padding: 1rem;
+}
+
+@media only screen and (max-width:768px){
+    .wrapper .right{
+        margin: 0 20px;
+    }
+    .container .section-heading{
+        margin-bottom: 3rem;
+        font-size: 3.2rem;
+    }
+    .wrapper{
+        flex-direction: column;
+        text-align: center;
+    }
+    .wrapper .right .desc{
+        font-size: 1.5rem;
+        line-height: 25px;
+    }
+    .contact-info{
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+        margin-bottom: 2rem;
+    }
+    .contact-info .text{
+        font-size: 1.5rem;
+    }
+}
